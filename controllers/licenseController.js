@@ -46,8 +46,6 @@ exports.validateLicense = async (req, res) => {
     }
 };
 
-
-
 // Main function to expired License Date Change
 exports.expiredLicensedatechange = async (req, res) => {
     const { domain } = req.body;

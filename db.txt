@@ -1,11 +1,19 @@
-CREATE TABLE `default`.LICENSE (
-    `LICENSE_ID`  UUID DEFAULT generateUUIDv4(),
-    `DOMIN` String,
+CREATE TABLE default.LICENSE
+(
+
+    `LICENSE_ID` UUID DEFAULT generateUUIDv4(),
+
+    `DOMAIN` String,
+
     `TOKEN` String,
+
+    `ACTIVE` Bool,
+
     `START_DATE` Date,
-    `END_DATE` Date,
-    `ACTIVE` Boolean 
-)ENGINE = MergeTree
+
+    `END_DATE` Date
+)
+ENGINE = MergeTree
 PRIMARY KEY LICENSE_ID
 ORDER BY LICENSE_ID
 SETTINGS index_granularity = 8192;
